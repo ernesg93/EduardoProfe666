@@ -16,14 +16,15 @@
 - ⚙️ Special interest in **Backend and DevOps**, focused on robust and automated solutions
 - 🤖 Building enterprise **AI agents and chatbots** using **n8n**
 - ⚡ Love building tools that improve people's lives, especially other developers'
-- 🤝 **3 years of professional experience** as mid senior fullstack developer at:
-  - [AlsoftPro](https://www.facebook.com/p/ALsoftpro-100083052526414/)
-  - [AICA+](https://www.aica.cu/)
-  - [Medialityc](https://github.com/Medialityc)
-  - [Ecos Productions](https://www.ecosvideos.com)
-  - [EMSI FARMA TECH](https://emsifarma.com)
-  - [Codes SRL](https://www.codestic.net/)
+- 🤝 **4 years of professional experience** as mid senior fullstack developer at:
   - [AIKoders LLC](https://aikoders.tech)
+  - [Codes SRL](https://www.codestic.net/)
+  - [EMSI FARMA TECH](https://emsifarma.com)
+  - [Ecos Productions](https://www.ecosvideos.com)
+  - [Medialityc](https://github.com/Medialityc)
+  - [AICA+](https://www.aica.cu/)
+  - [AlsoftPro](https://www.facebook.com/p/ALsoftpro-100083052526414/)
+  - [CUJAE](https://cujae.edu.cu/)
 - 🎯 Always seeking to improve and share knowledge.
 
 ## 🌎 Find Me
