@@ -77,7 +77,7 @@
         <div align="center">
           <a href="https://www.typescriptlang.org/" target="_blank"><img style="margin: 10px; height: 50px;" src="https://profilinator.rishav.dev/skills-assets/typescript-original.svg" alt="TypeScript" height="50" /></a>  
           <a href="https://nodejs.org/" target="_blank"><img style="margin: 10px; height: 50px;" src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" height="50" /></a>  
-          <a href="https://n8n.com/" target="_blank"><img style="margin: 10px; height: 50px;" src="https://uxwing.com/n8n-icon/" alt="n8n" height="50" /></a> 
+          <a href="https://n8n.com/" target="_blank"><img style="margin: 10px; height: 50px;" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/n8n.svg" alt="n8n" height="50" /></a> 
           <a href="https://deno.land/" target="_blank"><img style="margin: 10px; height: 50px;" src="https://profilinator.rishav.dev/skills-assets/deno.svg" alt="Deno" height="50" /></a> 
           <a href="https://expressjs.com/" target="_blank"><img style="margin: 10px; height: 50px;" src="https://profilinator.rishav.dev/skills-assets/express-original-wordmark.svg" alt="Express.js" height="50" /></a> 
           <a href="https://nestjs.com/" target="_blank"><img style="margin: 10px; height: 50px;" src="https://profilinator.rishav.dev/skills-assets/nestjs.svg" alt="NestJS" height="50" /></a>  
