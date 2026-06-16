@@ -70,6 +70,7 @@
           <a href="https://reactjs.org/" target="_blank"><img style="margin: 10px; height: 50px;" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="50" /></a>  
           <a href="https://nextjs.org/" target="_blank"><img style="margin: 10px; height: 50px;" src="https://profilinator.rishav.dev/skills-assets/nextjs.png" alt="NextJS" height="50" /></a>  
           <a href="https://www.astro.build/" target="_blank"><img style="margin: 10px; height: 50px;" src="https://profilinator.rishav.dev/skills-assets/astro.svg" alt="Astro" height="50" /></a>  
+          <a href="https://svelte.dev/" target="_blank"><img style="margin: 10px; height: 50px;" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/svelte.svg" alt="Svelte" height="50" /></a>
           <a href="https://jquery.com/" target="_blank"><img style="margin: 10px; height: 50px;" src="https://profilinator.rishav.dev/skills-assets/jquery.png" alt="jQuery" height="50" /></a> 
         </div>
       </td>
