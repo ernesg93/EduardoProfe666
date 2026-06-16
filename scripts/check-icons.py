@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Check that all technology icon URLs in README.md return HTTP 200.
+"""Check that all external image URLs in README.md return HTTP 200.
 
-Reads the Technologies & Tools section, extracts every image src,
-and validates each returns a successful HTTP status.
+Extracts every <img> tag from the entire README, skips local file paths
+(assets/), and validates each external URL returns a successful HTTP status.
 Exits with code 1 if any URL is broken.
 """
 
@@ -12,34 +12,38 @@ import urllib.request
 import urllib.error
 
 README_PATH = "README.md"
-SECTION_HEADER = "## 🚀 Technologies & Tools"
 TIMEOUT = 15  # seconds per request
 
 
-def extract_section(content: str, header: str) -> str:
-    """Extract content from header until the next header or end of file."""
+def extract_all_image_urls(content: str) -> list[tuple[str, str, str]]:
+    """Extract (alt_text, url, section_name) from all <img> tags.
+
+    Skips local file references (assets/*).
+    """
+    img_pattern = re.compile(r'<img[^>]*\s+src="([^"]+)"[^>]*\s+alt="([^"]*)"[^>]*>')
+    urls: list[tuple[str, str, str]] = []
+
     lines = content.splitlines()
-    start = None
+    current_section = "(top)"
+
     for i, line in enumerate(lines):
-        if line.strip().startswith(header):
-            start = i
-            break
-    if start is None:
-        return ""
+        stripped = line.strip()
+        # Track current section heading
+        if stripped.startswith("## "):
+            current_section = stripped.lstrip("#").strip()
+            continue
 
-    # Collect lines until next top-level heading (##) or end
-    section_lines = []
-    for line in lines[start + 1 :]:
-        if line.strip().startswith("## ") and not line.strip().startswith(header):
-            break
-        section_lines.append(line)
-    return "\n".join(section_lines)
+        for match in img_pattern.finditer(line):
+            url = match.group(1)
+            alt = match.group(2)
 
+            # Skip local file references
+            if url.startswith("assets/") or url.startswith("./") or url.startswith("../"):
+                continue
 
-def extract_image_urls(html_section: str) -> list[tuple[str, str]]:
-    """Extract (alt_text, url) pairs from <img> tags."""
-    pattern = re.compile(r'<img[^>]*\s+src="([^"]+)"[^>]*\s+alt="([^"]*)"[^>]*>')
-    return [(m.group(2), m.group(1)) for m in pattern.finditer(html_section)]
+            urls.append((alt, url, current_section))
+
+    return urls
 
 
 def check_url(alt: str, url: str) -> tuple[str, int | str, bool]:
@@ -48,7 +52,11 @@ def check_url(alt: str, url: str) -> tuple[str, int | str, bool]:
         req = urllib.request.Request(
             url,
             method="GET",
-            headers={"User-Agent": "Mozilla/5.0 (compatible; IconChecker/1.0)"},
+            headers={
+                "User-Agent": (
+                    "Mozilla/5.0 (compatible; IconChecker/1.0)"
+                ),
+            },
         )
         with urllib.request.urlopen(req, timeout=TIMEOUT) as resp:
             status = resp.status
@@ -66,37 +74,40 @@ def main() -> int:
     with open(README_PATH, "r", encoding="utf-8") as f:
         content = f.read()
 
-    section = extract_section(content, SECTION_HEADER)
-    if not section:
-        print(f"::error::Section '{SECTION_HEADER}' not found in {README_PATH}")
+    images = extract_all_image_urls(content)
+    if not images:
+        print(f"::error::No external image URLs found in {README_PATH}")
         return 1
 
-    icons = extract_image_urls(section)
-    if not icons:
-        print(f"::error::No image tags found in section '{SECTION_HEADER}'")
-        return 1
-
-    print(f"Checking {len(icons)} icon URLs...\n")
+    print(f"Checking {len(images)} external image URLs...\n")
 
     failed = 0
-    results = []
-    for alt, url in icons:
+    current_section = None
+
+    for alt, url, section in images:
+        # Print section header when section changes
+        if section != current_section:
+            current_section = section
+            print(f"\n--- {section} ---")
+
         alt_text, status, ok = check_url(alt, url)
-        status_line = f"  [OK] {status}" if ok else f"  [FAIL] {status}"
-        results.append((ok, alt_text, url, status_line))
+        status_icon = "[OK]" if ok else "[FAIL]"
         if not ok:
             failed += 1
 
-        # Print in order
-        print(f"  {alt_text}: {url}")
-        print(status_line)
+        safe_url = url.encode("utf-8", errors="replace").decode("utf-8")
+        print(f"  {alt_text}: {safe_url}")
+        print(f"    {status_icon} {status}")
         print()
 
-    summary = f"\n{'='*50}\n{len(icons)} icons checked, {failed} failed"
+    summary = (
+        f"\n{'='*50}\n"
+        f"{len(images)} URLs checked across all sections, {failed} failed"
+    )
     if failed:
-        print(f"{summary}\n::error::[FAIL] {failed} icon(s) returned errors")
+        print(f"{summary}\n::error::[FAIL] {failed} URL(s) returned errors")
     else:
-        print(f"{summary}\n[OK] All icons OK")
+        print(f"{summary}\n[OK] All external image URLs OK")
 
     return 1 if failed else 0
 
