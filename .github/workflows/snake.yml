@@ -31,4 +31,6 @@ jobs:
           target_branch: output
           build_dir: dist
         env:
+          # NOTE: Uses SECRET (custom). If the workflow fails, verify this
+          # secret exists in the repo settings, or replace with GITHUB_TOKEN.
           GITHUB_TOKEN: ${{ secrets.SECRET }}
