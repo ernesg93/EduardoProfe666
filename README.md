@@ -431,5 +431,5 @@
 <img width="100%" src="https://raw.githubusercontent.com/EduardoProfe666/EduardoProfe666/output/snake.svg" alt="Snake animation" />
 
 <div align="center" width="100%">
-    <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=300&color=timeGradient&text=EduardoProfe666🎩&section=footer&reversal=true&textBg=false&animation=twinkling&stroke=000000&strokeWidth=2&fontAlign=50&fontAlignY=65&fontSize=55" alt="Footer"/>
+    <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=300&color=timeGradient&text=EduardoProfe666%F0%9F%8E%A9&section=footer&reversal=true&textBg=false&animation=twinkling&stroke=000000&strokeWidth=2&fontAlign=50&fontAlignY=65&fontSize=55" alt="Footer"/>
 </div>
