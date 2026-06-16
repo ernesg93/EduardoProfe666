@@ -53,6 +53,9 @@
 
 ## 🚀 Technologies & Tools
 
+<!-- NOTE: Some img tags have both style="height:50px" and height="50".
+     Either one is sufficient; both together is harmless but redundant. -->
+
 <div align="center">
   <table>
     <tr>
