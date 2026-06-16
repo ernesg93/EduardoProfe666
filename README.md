@@ -148,6 +148,10 @@
 
 ## 🏆 Achievements & Trophies
 
+<!-- NOTE: The trophy service (github-profile-trophy.vercel.app) is a
+     third-party service and may occasionally be unavailable or rate-limited.
+     If the image doesn't load, it's a service issue, not the repo. -->
+
 <div align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=EduardoProfe666&theme=tokyonight&margin-w=3" alt="Trophies">
 </div>
