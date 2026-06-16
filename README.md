@@ -106,7 +106,7 @@
          <a href="https://kubernetes.io/" target="_blank"><img style="margin: 10px; height: 50px;" src="https://profilinator.rishav.dev/skills-assets/kubernetes-icon.svg" alt="Kubernetes" height="50" /></a>  
          <a href="https://github.com/" target="_blank"><img style="margin: 10px; height: 50px;" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" /></a>  
          <a href="https://about.gitlab.com/" target="_blank"><img style="margin: 10px; height: 50px;" src="https://profilinator.rishav.dev/skills-assets/gitlab.svg" alt="GitLab" height="50" /></a>
-         <a href="https://github.com/features/actions" target="_blank"><img style="margin: 10px; height: 50px;" src="https://avatars.githubusercontent.com/u/44036562?s=400&v=4" alt="GitHub Actions" height="50" /></a>
+         <a href="https://github.com/features/actions" target="_blank"><img style="margin: 10px; height: 50px;" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/githubactions.svg" alt="GitHub Actions" height="50" /></a>
         </div>
       </td>
     </tr>
