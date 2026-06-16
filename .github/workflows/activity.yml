@@ -11,6 +11,7 @@ jobs:
       contents: write
 
     steps:
+      # REVIEW: actions/checkout@v3 is outdated. Consider updating to v4.
       - uses: actions/checkout@v3
       - uses: jamesgeorge007/github-activity-readme@master
         env:
