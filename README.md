@@ -29,6 +29,10 @@
 
 ## 🌎 Find Me
 
+<!-- NOTE: All external links use target="_blank". For extra security,
+     consider adding rel="noopener noreferrer" to each. Modern browsers
+     handle this automatically in most cases. -->
+
 <div align="center">
   <a href="https://youtube.com/@EduardoProfe666" target="_blank">
     <img src="https://img.shields.io/badge/Youtube-ED0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube">
