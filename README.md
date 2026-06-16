@@ -253,7 +253,8 @@
         </a>
       </td>
     </tr>
-          <td align="center">
+    <tr>
+      <td align="center">
         <a href="https://github.com/EduardoProfe666/Proyecto-Api-Personalizada">
           <img src="https://github-readme-stats.vercel.app/api/pin/?username=EduardoProfe666&repo=Proyecto-Api-Personalizada&theme=tokyonight" alt="Custom API Project" />
         </a>
@@ -264,7 +265,8 @@
         </a>
       </td>
     </tr>
-          <td align="center">
+    <tr>
+      <td align="center">
         <a href="https://github.com/EduardoProfe666/PyImageEditor">
           <img src="https://github-readme-stats.vercel.app/api/pin/?username=EduardoProfe666&repo=PyImageEditor&theme=tokyonight" alt="PyImageEditor" />
         </a>
@@ -275,13 +277,13 @@
         </a>
       </td>
     </tr>
-    </tr>
-        <td align="center">
+    <tr>
+      <td align="center">
         <a href="https://github.com/EduardoProfe666/Wifi-Repair">
           <img src="https://github-readme-stats.vercel.app/api/pin/?username=EduardoProfe666&repo=Wifi-Repair&theme=tokyonight" alt="WiFi Repair" />
         </a>
       </td>
-       <td align="center">
+      <td align="center">
         <a href="https://github.com/EduardoProfe666/Look-And-Feels">
           <img src="https://github-readme-stats.vercel.app/api/pin/?username=EduardoProfe666&repo=Look-And-Feels&theme=tokyonight" alt="Look And Feels" />
         </a>
