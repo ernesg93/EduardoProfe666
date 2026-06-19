@@ -15,9 +15,9 @@ jobs:
       - uses: actions/checkout@v3
       - uses: jamesgeorge007/github-activity-readme@master
         env:
-          # NOTE: Uses SECRET (custom). If the workflow fails, verify this
-          # secret exists in the repo settings, or replace with GITHUB_TOKEN.
-          GITHUB_TOKEN: ${{ secrets.SECRET }}
+          # NOTE: Uses SECRET when present, otherwise falls back to the
+          # repository-scoped GitHub token so forks can run this workflow.
+          GITHUB_TOKEN: ${{ secrets.SECRET || github.token }}
         with:
           MAX_LINES: 15
           COMMIT_NAME: GitHub Activity Readme
