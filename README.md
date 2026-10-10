@@ -160,8 +160,8 @@
 
 <!--START_SECTION:activity-->
 
-1. ❗ Opened issue [#1](https://github.com/ernesg93/CYNDY-app/issues/1) in [ernesg93/CYNDY-app](https://github.com/ernesg93/CYNDY-app)
-2. 🎉 Merged PR [#4](https://github.com/ernesg93/NaldoPro/pull/4) in [ernesg93/NaldoPro](https://github.com/ernesg93/NaldoPro)
+1. ℹ️ Labeled PR [#2](https://github.com/ernesg93/CYNDY-app/pull/2) in [ernesg93/CYNDY-app](https://github.com/ernesg93/CYNDY-app)
+2. 💪 Opened PR [#2](https://github.com/ernesg93/CYNDY-app/pull/2) in [ernesg93/CYNDY-app](https://github.com/ernesg93/CYNDY-app)
 <!--END_SECTION:activity-->
 
 ## 💡 Featured Projects
